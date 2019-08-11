@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="index.css">
+	<link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua%7CSpace+Mono&display=swap" rel="stylesheet">
+	<title>Find your sunrise and sunset</title>
+</head>
+
+<body id="body">
+	<h1>Find out about your sunrise and sunset!</h1>
+	<p class="intro-text">Enter a location and date and plan your outdoor adventures!</p>
+
+	<fieldset>
+		<form>
+			<input type="text" id="user-input-location" autocomplete="off" placeholder="Ex: Atlanta, GA" required>
+            <input type="date" id="user-input-date" required>
+            <input type="submit" id="user-click" value="Submit">
+        </form>
+    </fieldset>
+
+    <h2 id="results-header">Here is how your day looks! Be safe on your adventures!</h2>
+    <div class="search-results"></div>
+    <div class="map"> </div>
+    <div class="reset">
+      <input id="reset" type="button" name="reset" value="return to home">
+    </div>
+    <div class="tribute-text"><span>Powered by sunrise-sunset.org</span></div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
