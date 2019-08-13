@@ -12,13 +12,13 @@ body {
 }
 
 html {
-  background: url(https://cdn.pixabay.com/photo/2017/02/19/15/28/italy-2080072_960_720.jpg) no-repeat center center fixed;
+  background: url(https://4.bp.blogspot.com/-sBL9Wq892l8/W-_pLKUoTNI/AAAAAAAA9fk/uzvzJmtPV38HcM0qwZpHjukIi4iXJupFgCLcBGAs/s1600/advdj9y5gty11.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   color: whitesmoke;
-  background-image: linear-gradient(to bottom, rgba(255, 159, 134, .40), rgba(60, 48, 67, .70)), url(https://cdn.pixabay.com/photo/2017/02/19/15/28/italy-2080072_960_720.jpg);
+  background-image: linear-gradient(to bottom, rgba(255, 159, 134, .40), rgba(60, 48, 67, .70)), url(https://4.bp.blogspot.com/-sBL9Wq892l8/W-_pLKUoTNI/AAAAAAAA9fk/uzvzJmtPV38HcM0qwZpHjukIi4iXJupFgCLcBGAs/s1600/advdj9y5gty11.png);
   height: 100%;
 }
 
@@ -26,8 +26,11 @@ h1 {
   font-size: 125%;
   font-weight: normal;
   text-align: center;
-  color: white;
+  color: yellow;
   text-shadow: 1px 1px black;
+}
+h2{
+  color: yellow;
 }
 
 #results-header {
@@ -70,7 +73,7 @@ fieldset {
 }
 
 span {
-  color: white;
+  color: yellow;
   text-shadow: 1px 1px black;
 }
 
@@ -130,6 +133,7 @@ div #astronomicalTime {
   margin-left: 1%;
   text-shadow: 1px 1px 1px black;
   text-align: center;
+  color: yellow;
 }
 
 .search-results span {
@@ -158,13 +162,13 @@ br {
 
 @media only screen and (min-width: 768px) {
   html {
-    background: url(https://cdn.pixabay.com/photo/2017/02/19/15/28/italy-2080072_960_720.jpg) no-repeat center center fixed;
+    background: url(https://cdn.pixabay.com/photo/2016/05/31/06/08/pine-trees-1426256_960_720.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: whitesmoke;
-    background-image: linear-gradient(to bottom, rgba(255, 159, 134, .40), rgba(60, 48, 67, .60)), url(https://cdn.pixabay.com/photo/2017/09/06/08/18/palm-2720615_960_720.jpg);
+    background-image: linear-gradient(to bottom, rgba(255, 159, 134, .40), rgba(60, 48, 67, .60)), url(https://cdn.pixabay.com/photo/2016/05/31/06/08/pine-trees-1426256_960_720.jpg);
     height: 100%;
   }
 
