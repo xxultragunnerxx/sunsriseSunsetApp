@@ -100,7 +100,7 @@ function formatUserParamsQuery(mapquestObjectData) {
 
 //the results
 function sunriseResultsData(responseJSON) {
-  const newDate = Object.keys(responseJSON.results).map(key => `${new Date(`${userDateSelected.replace(/-/g, '/')} ${responseJSON.results[key]} UTC`)}`).map(string => string.slice(0, 24)).map(string => string.concat(`Your Local Time`))
+  const newDate = Object.keys(responseJSON.results).map(key => `${new Date(`${userDateSelected.replace(/-/g, '/')} ${responseJSON.results[key]} UTC`)}`).map(string => string.slice(0, 24)).map(string => string.concat(` Local Time`))
   $('.search-results').append(
     `<div id="sunriseTime"><span>Sunrise: ${newDate[0]}<br>
   Sunset Time: ${newDate[1]}<br>
