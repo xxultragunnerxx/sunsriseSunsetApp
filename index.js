@@ -17,7 +17,6 @@ function getStaticMap(userLocation) {
     "locations": userLocation,
     "size": "170,170"
   }
-
   const formattedStaticMapParams = formatUserParamsQuery(staticMapParams);
   const staticMapRequestURL = staticMapURL + formattedStaticMapParams
 
@@ -32,7 +31,7 @@ function getStaticMap(userLocation) {
       drawMap(responseJson.url);
     })
     .catch(err => {
-      $('.search-results').text('Something went wrong')
+      $('.search-results').text(`${err.message}`)
     });
 }
 
@@ -57,16 +56,17 @@ function getUserMapquestInfo(location) {
 
       //checks the Json for what should be valid entries
       if (responseJson.results[0].locations[0].adminArea3 === "" || responseJson.results[0].locations[0].adminArea4 === "") {
-        $('.error-messages').text('Please enter a valid location')
-        return $('#results-header').css('display', 'none');
+        $('.error-messages').text('Whoa, looks like we could not find that place on Earth! Please enter a valid City, State.')
+        return $('#results-header').css('display', 'none'), $('html').css("background-image", "url('https://cdn.pixabay.com/photo/2011/12/13/14/30/earth-11014_960_720.jpg')");
       }
+
       mapquestLat = `${responseJson.results[0].locations[0].latLng.lat}`
       mapquestLng = `${responseJson.results[0].locations[0].latLng.lng}`
       sunriseQuery(mapquestLat, mapquestLng, userDateSelected);
       getStaticMap(responseJson.results[0].providedLocation.location);
     })
     .catch(err => {
-      $('.search-results').txt(`${err.message}`)
+      $('.error-messages').text(`${err.message}`)
     });
 }
 
@@ -92,7 +92,7 @@ function sunriseQuery(mapquestLat, mapquestLng, userDateSelected) {
       sunriseResultsData(responseJson);
     })
     .catch(err => {
-      $('.search-results').txt('Something went wrong')
+      $('.error-messages').txt(`${err.message}`)
     });
 }
 
@@ -150,6 +150,5 @@ function reset() {
     $('.tribute-text, .intro-text').fadeIn(1000)
   })
 }
-
-$(reset);
 $(main);
+$(reset);
